@@ -2,9 +2,9 @@ create Database project;
 use project;
 
 CREATE TABLE users ( 
-user_id INT AUTO_INCREMENT PRIMARY KEY, 
-name VARCHAR(100), 
-email VARCHAR(100) UNIQUE 
+user_id INT AUTO_INCREMENT PRIMARY KEY,  
+email VARCHAR(100) UNIQUE ,
+password VARCHAR(255)
 ); 
 
 CREATE TABLE expenses ( 
@@ -50,5 +50,3 @@ VALUES
 
 use project;
 ALTER TABLE users ADD COLUMN role ENUM('admin', 'user') DEFAULT'user';
-ALTER TABLE users DROP COLUMN name;
-Alter table users add password varchar(255);
